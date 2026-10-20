@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EduCloud School Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="login" class="login-screen">
+  <div class="login-card">
+    <div class="brand big">🎓 <span>EduCloud</span></div>
+    <p class="muted">Cloud School Management Portal</p>
+    <label>Email</label><input id="email" type="email" placeholder="admin@school.com">
+    <label>Password</label><input id="password" type="password" placeholder="••••••••">
+    <button class="primary full" id="loginBtn">Sign in</button>
+    <button class="ghost full" id="demoBtn">Use demo mode</button>
+    <p id="loginMsg" class="muted"></p>
+  </div>
+</div>
+<div class="app hidden" id="app">
+<aside><div class="brand">🎓 <span>EduCloud</span></div><div class="role">SCHOOL MANAGEMENT</div>
+<nav>
+<button class="nav active" data-page="dashboard">⌂ Dashboard</button><button class="nav" data-page="students">👨‍🎓 Students</button><button class="nav" data-page="teachers">👩‍🏫 Teachers</button><button class="nav" data-page="attendance">✓ Attendance</button><button class="nav" data-page="results">📊 Results</button><button class="nav" data-page="fees">💳 Fees</button><button class="nav" data-page="timetable">🗓 Timetable</button><button class="nav" data-page="notices">🔔 Notices</button>
+</nav><div class="sidebottom">☁ Cloud connected<br><small id="connection">Checking connection…</small><button class="ghost full" id="logoutBtn">Log out</button></div></aside>
+<main><header><button id="menu">☰</button><div><div class="crumb">School Portal / <b id="pageName">Dashboard</b></div><h1 id="title">Good evening, Admin 👋</h1></div><div class="header-right"><span class="online">● Online</span><div class="avatar">A</div></div></header><section id="content"></section></main></div>
+<div id="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
